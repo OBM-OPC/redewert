@@ -1,0 +1,45 @@
+---
+const services = [
+  {
+    title: 'Persönliches Vorgespräch',
+    text: `Wir treffen uns zu einem ausführlichen Gespräch und reden gemeinsam über vergangene Zeiten und Erlebtes. Dabei findet man häufig in den Gedanken versteckte 'Schätze des Lebens' und entdeckt schöne Erinnerungen wieder. Denn ich möchte den Menschen in all seinen Facetten und Nuancen nachzeichnen und ihn noch einmal spürbar werden lassen.`
+  },
+  {
+    title: 'Individuelle Abschiedsrede',
+    text: `Das Herzstück der Zeremonie ist die persönliche Abschieds- bzw. Lebens-Rede. Diese gestalte ich für jeden Menschen neu, denn sie soll so einmalig sein, wie das Leben Ihrer/Ihres Verstorbenen es war. Die Trauerrede beinhaltet einen persönlichen Teil, welcher die wichtigsten Säulen des Lebens wiedergibt und das, was Ihren Angehörigen besonders auszeichnete. Dabei interessiert mich vor allem das Besondere, das Einzigartige, das Unverwechselbare!`
+  },
+  {
+    title: 'Musikalische Umrahmung',
+    text: `Musik ist ein wichtiges Element bei einer Abschiedsfeier und tut gut, tröstet und erhebt. Ich kann Ihnen nach eigenem musikalischen Gefühl einige Lieder vorschlagen, die passend für die Stimmung und das Wesen Ihres verstorbenen Angehörigen sein könnten. Wir werden dann gemeinsam entscheiden, welche Musik eingesetzt wird und auch von wem diese eingespielt wird.`
+  },
+  {
+    title: 'Freie Trauerfeier',
+    text: `Eine Trauerfeier ist keine Abwicklung, sondern ein Ritual der Freunde und Angehörigen, das den Verstorbenen ehrt und begleitet. Meine Aufgabe ist es, eine würdevolle, respektvolle, einfühlsame, authentische und liebevolle Veranstaltung zu gestalten. Hierbei bin ich ganz Ihre Diensterin, denn Sie wissen am besten, was Ihrem Angehörigen gefallen hätte und was nicht.`
+  },
+  {
+    title: 'Sprecher/in suchen',
+    text: `Sie haben Ihre Abschiedsrede bereits verfasst oder möchten dies selbst übernehmen? Gerne unterstütze ich Sie dabei, Ihre Rede zu strukturieren und auf den Punkt zu bringen. Gemeinsam schärfen wir Ihren Text und bereiten ihn auf den emotionalen Moment vor.`
+  },
+  {
+    title: 'Lebensgeschichte(n)',
+    text: `Ich halte es für sehr sinnvoll und wertvoll, über ein langes Leben und viele Lebensjahre Erinnerungen zu bewahren. Denn Menschen leben mit ihren Erinnerungen und diese sind ein wichtiger Teil unseres Daseins. Sollten Sie Interesse daran haben, kann ich gemeinsam mit Ihnen/Ihrem Angehörigen eine Biografie gestalten.`
+  }
+];
+---
+
+<section id="leistungen" class="bg-[#F2EEEB] py-20 px-[4vw]">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="font-heading text-[clamp(2rem,4vw,3.5rem)] text-[#1C4003] text-center mb-16">
+      Meine Leistungen
+    </h2>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map((service) => (
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h3 class="font-heading text-xl text-[#1C4003] mb-4">{service.title}</h3>
+          <p class="font-body text-[#5C734C] text-sm leading-relaxed">{service.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

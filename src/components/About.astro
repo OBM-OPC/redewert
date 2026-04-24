@@ -1,0 +1,50 @@
+---
+const accordionId = 'about-accordion';
+---
+
+<section id='ueber-mich' class='bg-[#1C4003] text-[#BFAB99] py-[3vw] px-[4vw]'>
+  <div class='max-w-4xl mx-auto text-center'>
+    <h2 class='font-heading text-3xl md:text-4xl text-[#BFAB99] mb-2'>Über mich</h2>
+    <h3 class='font-body text-lg md:text-xl text-[#BFAB99] mb-4'>klaus reinke - Ihr Abschiedsredner</h3>
+    <div class='w-[10%] h-[3px] bg-[#BFAB99] mx-auto mb-6'></div>
+
+    <p class='font-body text-base md:text-lg leading-relaxed mb-6 text-[#BFAB99]'>
+      Abschied zu nehmen von einem nahestehenden Menschen ist eine der schwierigsten Momente in unserem Leben. Menschen in einer Phase zu begleiten, die von Verlust und Trauer, oft auch Fassungslosigkeit geprägt ist, ist mir eine besondere Herzensangelegenheit.
+    </p>
+    <p class='font-body text-base md:text-lg leading-relaxed mb-6 text-[#BFAB99]'>
+      Diese Orientierung betrachte ich auch nach meiner Ausbildung zum Trauerredner und meinen vielen Erfahrungen als Abschiedsredner als meinen Auftrag.
+    </p>
+    <p class='font-body text-base md:text-lg leading-relaxed mb-8 text-[#BFAB99]'>
+      Ich selbst weiß aus eigenen Erfahrungen, wie schwer es ist jemanden gehen zu lassen und wie wichtig dieser letzte gemeinsame Tag ist. Es ist das Ende eines gemeinsamen Weges und gleichzeitig der Beginn eines neuen. Dieser neue Weg soll mit einer individuellen und würdevollen Abschiedsfeier beginnen und Ihnen den Weg ebnen, voll dankbarer Erinnerungen voller Zuversicht nach vorne zu schauen.
+    </p>
+
+    <button class='accordion bg-transparent underline text-[#1C4003] cursor-pointer text-left w-full border-none outline-none transition-colors duration-400 font-body text-[15px] py-2' data-target={accordionId}>
+      mehr zu mir
+    </button>
+    <div id={accordionId} class='panel max-h-0 overflow-hidden transition-[max-height] duration-200 ease-out bg-white text-[#1C4003]'>
+      <div class='px-4 py-6 text-left'>
+        <p class='mb-4'><strong>Persönliches.</strong> Ich wurde 1958 in Ludwigshafen am Rhein geboren, habe einen erwachsenen Sohn und lebe heute mit meiner Frau an der schönen Bergstraße. Beruflich habe ich in verschiedenen Management-Funktionen viel mit Menschen zusammengearbeitet. Dabei war mir immer das Individuum und seine Charakteristika wichtig. Bei meinen unterschiedlichen Tätigkeiten und auch zu privaten Anlässen habe ich oft Reden halten dürfen und kann von mir sagen, dass ich redegeübt bin.</p>
+        <p class='mb-4'>Ich bin seit 2024 im Ruhestand und habe mir für diesen neuen Lebensabschnitt eine Neuausrichtung vorgenommen. Dabei möchte ich noch stärker den Menschen und Soziales ins Zentrum meines Tuns zu stellen. Hierfür engagiere ich mich einerseits als Erste-Hilfe-Ausbilder bei den Maltesern in Heidelberg. Andererseits möchte ich Menschen in einer schwierigen Zeit sinnvoll unterstützen.</p>
+        <p>Deswegen habe ich, getreu nach dem Motto: 'Neue Wege entstehen dadurch, dass man sie geht.“ eine Ausbildung zum Trauerredner gemacht, die IHK-Prüfung abgelegt und bin seit 2024 als Abschiedsredner auf den Friedhöfen an der Bergstraße und in Frankfurt mit hoher Kundenzufriedenheit tätig.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class='mt-10 flex justify-center'>
+    <img src='/images/Klaus-Reinke-768x767.png' alt='Klaus Reinke Portrait' class='w-[90%] max-w-md rounded-sm' />
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.accordion').forEach(acc => {
+    acc.addEventListener('click', function() {
+      this.classList.toggle('active');
+      const panel = document.getElementById(this.dataset.target);
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+</script>

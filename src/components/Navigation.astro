@@ -1,0 +1,63 @@
+---
+const navLinks = [
+  { href: '#', label: 'start', onclick: 'closeNav2();topFunction()' },
+  { href: '#ueber-mich', label: 'über mich' },
+  { href: '#philosophie', label: 'meine philosophie' },
+  { href: '#kunden', label: 'rezensionen' },
+  { href: '#angebot', label: 'leistung' },
+  { href: '/meinungen', label: 'meinungen' },
+  { href: 'tel:+491709100541', label: '+491709100541' },
+  { href: '/impressum', label: 'impressum' },
+  { href: '/datenschutz', label: 'datenschutz' },
+  { href: '/cookie-richtlinie', label: 'cookie-richtlinie' },
+  { href: '/agb', label: 'agb' },
+];
+---
+
+<div id='mySidenav2' class='sidenav fixed top-0 left-0 h-screen w-0 bg-[#F4D3B5] z-[9999] pt-[60px] overflow-x-hidden transition-[width] duration-500'>
+  <a class='closebtn absolute top-0 right-[25px] text-[36px] ml-[50px] cursor-pointer text-[#1C4003] hover:text-[#5C734C]' onclick='closeNav2()' rel='nofollow'>&times;</a>
+  {navLinks.map((link, i) => (
+    <>
+      {i === 6 && (
+        <a id='redenwir' class='block px-8 py-2 text-[25px] text-[#1C4003] no-underline transition-colors duration-300 hover:text-[#5C734C] whitespace-nowrap overflow-hidden text-ellipsis'>
+          <b>Reden wir?</b>
+        </a>
+      )}
+      {link.onclick ? (
+        <a href={link.href} onclick={link.onclick} class='block px-8 py-2 text-[25px] text-[#1C4003] no-underline transition-colors duration-300 hover:text-[#5C734C] whitespace-nowrap overflow-hidden text-ellipsis'>{link.label}</a>
+      ) : (
+        <a href={link.href} onclick='closeNav2()' class='block px-8 py-2 text-[25px] text-[#1C4003] no-underline transition-colors duration-300 hover:text-[#5C734C] whitespace-nowrap overflow-hidden text-ellipsis'>{link.label}</a>
+      )}
+    </>
+  ))}
+</div>
+
+<div id='menuopener' class='fixed top-[3vw] left-[3vw] z-50 cursor-pointer'>
+  <svg id='burgermenusvg' onclick='openNav2()' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
+    viewBox='0 0 512 383.4' style='enable-background:new 0 0 512 383.4;' xml:space='preserve' class='w-[10vw] md:w-[4vw] lg:w-[2vw] h-auto'>
+    <style type='text/css'>
+      .st0{fill:#F4D3B5;}
+    </style>
+    <g>
+      <path class='st0' d='M31.1,62.2h449.8c17.2,0,31.1-14,31.1-31.1S498,0,480.9,0H31.1C13.9,0,0,14,0,31.1S14,62.2,31.1,62.2
+        L31.1,62.2z'/>
+      <path class='st0' d='M480.9,160.6H31.1c-17.2,0-31.1,14-31.1,31.1s14,31.1,31.1,31.1h449.8c17.2,0,31.1-14,31.1-31.1
+        S498,160.6,480.9,160.6z'/>
+      <path class='st0' d='M480.9,321.2H31.1c-17.2,0-31.1,14-31.1,31.1c0,17.2,14,31.1,31.1,31.1h449.8c17.2,0,31.1-14,31.1-31.1
+        C512,335.2,498,321.2,480.9,321.2z'/>
+    </g>
+  </svg>
+</div>
+
+<script is:inline>
+  function openNav2() {
+    document.getElementById('mySidenav2').style.width = '300px';
+  }
+  function closeNav2() {
+    document.getElementById('mySidenav2').style.width = '0';
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>

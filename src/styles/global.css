@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #F2EEEB;
+  --color-secondary: #BFAB99;
+  --color-text: #F2AB6D;
+  --color-accent: #1C4003;
+  --color-green-2: #5C734C;
+  --color-green-mid: #708860;
+  --color-peach: #F4D3B5;
+  --color-dark: #081400;
+
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-serif: "IBM Plex Serif", Georgia, serif;
+
+  --font-body: "IBM Plex Serif", Georgia, serif;
+  --font-heading: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.accordion::after {
+  content: "\02795";
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active::after {
+  content: "\2796";
+}

@@ -1,0 +1,56 @@
+---
+const testimonials = [
+  {
+    text: 'Lieber Herr Reinke, haben Sie vielen Dank für Ihre Worte und die Ruhe und Kraft, die Sie am gestrigen Tag ausgestrahlt haben. Damit haben Sie uns wahnsinnig geholfen. Sie haben die Vorschusslorbeeren nach unserem Vorgespräch \'bestätigt\' und noch übertroffen. Auch von Dritten haben wir nur positives Feedback bekommen, Ihre Empathie ist sehr groß und Sie haben unsere so geliebte \'Ate\' sehr schön beschrieben, da Sie aus unseren Gesprächen ihr Wesen erfasst und gespiegelt haben. Dafür danke ich Ihnen sehr auch im Namen meiner ganzen Familie.',
+    author: 'Lars B., Weinheim'
+  },
+  {
+    text: 'Ich möchte mich noch einmal herzlich für Ihre einfühlsame und zugleich sehr schön aufgebaute Rede bedanken. Sie war ein zentraler und bedeutender Teil der Trauerfeier und hat maßgeblich dazu beigetragen, dass die Feier genauso wurde, wie ich sie mir für meinen verstorbenen Mann gewünscht hatte. Ihre Worte haben unsere Erinnerungen und persönlichen Eindrücke sehr würdevoll aufgegriffen und in eine stimmige Form gebracht.',
+    author: 'Markus B.'
+  },
+  {
+    text: 'Es bedeutet mir sehr viel, mich bei Ihnen für Ihre Unterstützung und herzliche Begleitung bei der Beisetzung von Peter zu bedanken. Es war sehr eindrucksvoll, die Stimmung im Wald, die ländliche Ruhe samt Gockelkrähen und die Kombination der Rede und der Lieder haben wirklich schön zusammen harmoniert. Das haben mir mehrere Teilnehmer gestern schon signalisiert. Peter hätte es sicher auch gut gefallen.',
+    author: 'Christa S.'
+  },
+  {
+    text: 'Vielen herzlichen Dank für die würdevolle, schöne Trauerrede gestern bei der Trauerfeier meiner Mutter.',
+    author: 'Alexandra W.'
+  },
+  {
+    text: 'Hallo lieber Herr Reinke, ich will mich für Ihre schön gestaltete Abschiedsrede für meinen Mann von ganzem Herzen bedanken. Sie sind ein sehr gefühlvoller und emphatischer Mensch, der seine Berufung gefunden hat. Die Rede war sehr, sehr schön, was auch die Trauergäste bekundeten. Sie haben eine ganz liebevolle, ruhige Art, was auch sehr tröstlich ist. Auf jeden Fall sind Sie aus vollstem Herzen weiter zu empfehlen. Ganz lieben Dank. Gott segne Sie.',
+    author: 'Doris S.'
+  },
+  {
+    text: 'Lieber Herr Reinke, ich möchte mich auf diesem Wege nochmals für Ihre Unterstützung, sowie die wunderschöne und gefühlvolle Trauerrede bedanken. Ich kann Sie für Ihre Freundlichkeit und Empathie nur weiterempfehlen. Vielen Dank auch im Namen meiner Familie',
+    author: 'Petra K., Weinheim'
+  },
+  {
+    text: 'Hallo Herr Reinke. Ich möchte mich nochmal bei Ihnen bedanken, dass Sie das Gespräch mit uns so gut gemeistert und uns bei der Musikauswahl so gut beraten haben. Sie hatten eine angenehme Art mit allem umzugehen. Ihre Rede hat uns sehr gut gefallen. Auch meine Familie und Freundinnen haben sie gelobt. Vielen Dank für alles.',
+    author: 'Bärbel B.'
+  },
+  {
+    text: 'Hallo Herr Reinke, Ihre sehr empathische Rede wurde, von allen Anwesenden, sehr positiv aufgenommen. Wir werden Sie gerne und aus Überzeugung weiterempfehlen.',
+    author: 'Wolfgang P.'
+  },
+  {
+    text: 'Hallo Herr Reinke, ich wollte mich – auch im Namen meiner Schwester – herzlich bei Ihnen bedanken. Sowohl meine Schwester als auch ich waren mit der Durchführung und auch den gut gewählten Worten bei der Trauerfeier sehr zufrieden. Die Rückmeldungen der anderen Trauergäste waren ebenfalls sehr positiv.',
+    author: '—'
+  }
+];
+---
+
+<section id='kunden' class='bg-[#1C4003] text-[#BFAB99] py-[5vw] px-[4vw]'>
+  <div class='max-w-6xl mx-auto'>
+    <h2 class='font-heading text-3xl md:text-4xl text-[#BFAB99] mb-2 text-center'>Kundenmeinungen aus den letzten Jahren</h2>
+    <div class='w-[5%] h-[3px] bg-[#BFAB99] mx-auto mb-8'></div>
+
+    <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
+      {testimonials.map((t) => (
+        <div class='bg-[#5C734C] p-6 rounded-sm'>
+          <p class='font-body text-sm md:text-base leading-relaxed text-[#F2EEEB] mb-4'>'{t.text}'</p>
+          <p class='font-heading text-sm text-[#BFAB99] text-right'>— {t.author}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
