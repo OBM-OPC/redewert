@@ -2,33 +2,50 @@
 const accordionId = 'philosophy-accordion';
 ---
 
-<section id='philosophie' class='relative bg-[#5C734C] text-[#F2EEEB] py-[5vw] px-[4vw]' 
-  style='background-image: url('/images/loewenzahn.webp'); background-position: bottom center; background-repeat: no-repeat; background-size: 60% auto;'
+<section id='philosophie' class='relative bg-[#5C734C] text-[#F2EEEB] py-[5vw] px-[4vw]'
+  style="background-image: url('/images/loewenzahn.webp'); background-position: bottom center; background-repeat: no-repeat; background-size: 60% auto;"
 >
   <div class='max-w-4xl mx-auto'>
     <h2 class='font-heading text-3xl md:text-4xl text-[#F2EEEB] mb-2'>Meine Philosophie</h2>
-    <h3 class='font-heading text-xl md:text-2xl text-[#F2EEEB] mb-4'>Jeder Mensch ist der Rede wert – so einzigartig wie sein Leben!</h3>
-    <div class='w-[10%] h-[3px] bg-[#F2EEEB] mb-6'></div>
+    <h3 class='font-heading text-xl md:text-2xl text-[#F2EEEB] mb-4'>Jeder Mensch ist der Rede wert<br>– so einzigartig wie sein Leben!</h3>
+    <div class='w-[60px] h-[3px] bg-[#F2EEEB] mb-6'></div>
 
     <p class='font-body text-base md:text-lg leading-relaxed mb-4'>
-      Das Ableben eines nahestehenden Menschen stellt für die Zurückbleibenden meistens ein schmerzhaftes Erlebnis dar. Wir spüren diesen unendlichen Schmerz, sind fassungslos, gelähmt und können den Tod dieses Menschen kaum begreifen. Trauer ist eines der gewaltigsten Gefühle, dem wir Menschen begegnen. Die Trauer ist so vielseitig und individuell wie wir Menschen selbst.
+      Das Ableben eines nahestehenden Menschen stellt für die Zurückbleibenden meistens ein schmerzhaftes Erlebnis dar. Wir spüren diesen unendlichen Schmerz, sind fassungslos, gelähmt und können den Tod dieses Menschen kaum begreifen.
     </p>
     <p class='font-body text-base md:text-lg leading-relaxed mb-4'>
-      Der Trauerprozess ist ein schwerer Weg, den wir nicht alleine gehen müssen, sondern mit liebevollen und verständnisvollen Menschen an unserer Seite. Auch ich möchte mit Ihnen als freier Trauerredner emotionale Erinnerungen schaffen, indem wir gemeinsam im Gespräch Worte finden, wofür es eigentlich keine Worte gibt.
+      Trauer ist eines der gewaltigsten Gefühle, dem wir Menschen begegnen. Die Trauer ist so vielseitig und individuell wie wir Menschen selbst.
+    </p>
+    <p class='font-body text-base md:text-lg leading-relaxed mb-4'>
+      Der Trauerprozess ist ein schwerer Weg, den wir nicht alleine gehen müssen, sondern mit liebevollen und verständnisvollen Menschen an unserer Seite. Auch ich möchte mit Ihnen als freier Trauerredner emotionale Erinnerungen schaffen, indem wir gemeinsam im Gespräch Worte finden, wofür es eigentlich keine Worte gibt. Wir schaffen damit einen Anfang für Ihren weiteren Weg, denn ich weiß, was Abschied nehmen bedeutet, denn ich kenne den Schmerz des Verlusts und ebenso die heilsame Kraft der Zuversicht.
     </p>
     <p class='font-body text-base md:text-lg leading-relaxed mb-8'>
-      Wir schaffen damit einen Anfang für Ihren weiteren Weg, denn ich weiß, was Abschied nehmen bedeutet, denn ich kenne den Schmerz des Verlusts und ebenso die heilsame Kraft der Zuversicht.
+      Viele Menschen sind sich dabei überhaupt nicht bewusst, welch „großen Schatz" jeder in sich trägt. Es sind die vielen schönen Erinnerungen, die uns niemand mehr wegnehmen kann. Erinnerungen – ein Vermächtnis, das wir besitzen.
     </p>
 
-    <button class='accordion bg-transparent underline text-[#1C4003] cursor-pointer text-left w-full border-none outline-none transition-colors duration-400 font-body text-[15px] py-2' data-target={accordionId}>
-      mehr zu meiner Philosophie
+    <button class='phil-accordion-btn bg-transparent underline text-[#F2EEEB] cursor-pointer text-left w-full border-none outline-none font-body text-[15px] py-2 transition-colors duration-400' data-target={accordionId}>
+      <strong>mehr zu meiner Philosophie</strong>
     </button>
-    <div id={accordionId} class='panel max-h-0 overflow-hidden transition-[max-height] duration-200 ease-out bg-white text-[#1C4003]'>
-      <div class='px-4 py-6 text-left'>
-        <p class='mb-4'>Ich möchte den Tag des Abschieds nicht noch schwerer machen. Mit meiner Begleitung der Trauerfeier und Rede möchte ich Ihnen die Möglichkeit geben, sich in Würde zu erinnern. Gemeinsam können wir Ihrer/m Angehörigen einen individuell passenden Abschied gestalten. Dies ist das letzte Zeichen der Liebe und Zugewandtheit, das Sie geben können, um den gemeinsamen Weg zu beenden.</p>
-        <p class='mb-4'>Und gleichzeitig ist es der erste Schritt auf einem neuen Weg, der nun bevorsteht. Und dieser soll so positiv wie möglich für Sie sein.</p>
-        <p>Das Abschiednehmen und Loslassen ist ein langer Prozess. Abschiednehmen bedeutet für die Hinterbliebenen immer, dass auch etwas Liebgewonnenes stirbt, denn wir müssen uns von unseren Träumen und Wünschen, von einer Zeit der Hoffnung, von einer Zeit des Glücks und von einer Zeit der Freude verabschieden.</p>
+    <div id={accordionId} class='phil-panel max-h-0 overflow-hidden transition-[max-height] duration-200 ease-out'>
+      <div class='text-left py-4'>
+        <p class='mb-4 font-body text-base leading-relaxed'>Ich möchte den Tag des Abschieds nicht noch schwerer machen. Mit meiner Begleitung der Trauerfeier und Rede möchte ich Ihnen die Möglichkeit geben, sich in Würde zu erinnern. Gemeinsam können wir Ihrer/m Angehörigen einen individuell passenden Abschied gestalten. Dies ist das letzte Zeichen der Liebe und Zugewandtheit, das Sie geben können, um den gemeinsamen Weg zu beenden.</p>
+        <p class='mb-4 font-body text-base leading-relaxed'>Und gleichzeitig ist es der erste Schritt auf einem neuen Weg, der nun bevorsteht. Und dieser soll so positiv wie möglich für Sie sein.</p>
+        <p class='font-body text-base leading-relaxed'>Das Abschiednehmen und Loslassen ist ein langer Prozess. Abschiednehmen bedeutet für die Hinterbliebenen immer, dass auch etwas Liebgewonnenes stirbt, denn wir müssen uns von unseren Träumen und Wünschen, von einer Zeit der Hoffnung, von einer Zeit des Glücks und von einer Zeit der Freude verabschieden.</p>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  document.querySelectorAll('.phil-accordion-btn').forEach(acc => {
+    acc.addEventListener('click', function() {
+      this.classList.toggle('active');
+      const panel = document.getElementById(this.dataset.target);
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+</script>

@@ -1,7 +1,7 @@
 ---
 const testimonials = [
   {
-    text: 'Lieber Herr Reinke, haben Sie vielen Dank für Ihre Worte und die Ruhe und Kraft, die Sie am gestrigen Tag ausgestrahlt haben. Damit haben Sie uns wahnsinnig geholfen. Sie haben die Vorschusslorbeeren nach unserem Vorgespräch \'bestätigt\' und noch übertroffen. Auch von Dritten haben wir nur positives Feedback bekommen, Ihre Empathie ist sehr groß und Sie haben unsere so geliebte \'Ate\' sehr schön beschrieben, da Sie aus unseren Gesprächen ihr Wesen erfasst und gespiegelt haben. Dafür danke ich Ihnen sehr auch im Namen meiner ganzen Familie.',
+    text: 'Lieber Herr Reinke,<br><br>haben Sie vielen Dank für Ihre Worte und die Ruhe und Kraft, die Sie am gestrigen Tag ausgestrahlt haben. Damit haben Sie uns wahnsinnig geholfen.<br><br>Sie haben die Vorschusslorbeeren nach unserem Vorgespräch „bestätigt" und noch übertroffen. Auch von Dritten haben wir nur positives Feedback bekommen, Ihre Empathie ist sehr groß und Sie haben unsere so geliebte „Ate" sehr schön beschrieben, da Sie aus unseren Gesprächen ihr Wesen erfasst und gespiegelt haben. Dafür danke ich Ihnen sehr auch im Namen meiner ganzen Familie.',
     author: 'Lars B., Weinheim'
   },
   {
@@ -29,12 +29,12 @@ const testimonials = [
     author: 'Bärbel B.'
   },
   {
-    text: 'Hallo Herr Reinke, Ihre sehr empathische Rede wurde, von allen Anwesenden, sehr positiv aufgenommen. Wir werden Sie gerne und aus Überzeugung weiterempfehlen.',
+    text: 'Hallo Herr Reinke, Ihre sehr empathische Rede wurde, von allen Anwesenden, sehr positiv aufgenommen. Wir werden Sie gerne und aus Überzeugung weiterempfehlen. Mit Dank und freundlichen Grüßen',
     author: 'Wolfgang P.'
   },
   {
-    text: 'Hallo Herr Reinke, ich wollte mich – auch im Namen meiner Schwester – herzlich bei Ihnen bedanken. Sowohl meine Schwester als auch ich waren mit der Durchführung und auch den gut gewählten Worten bei der Trauerfeier sehr zufrieden. Die Rückmeldungen der anderen Trauergäste waren ebenfalls sehr positiv.',
-    author: '—'
+    text: 'Hallo Herr Reinke,<br>ich wollte mich – auch im Namen meiner Schwester – herzlich bei Ihnen bedanken. Sowohl meine Schwester als auch ich waren mit der Durchführung und auch den gut gewählten Worten bei der Trauerfeier sehr zufrieden. Die Rückmeldungen der anderen Trauergäste waren ebenfalls sehr positiv. Üblicherweise begann das Gespräch mit der Frage: Wie habt ihr denn diesen guten Redner gefunden? Das sagt doch alles. Also: Nochmals herzlichen Dank! Mit freundlichen Grüßen',
+    author: 'Hans Z.'
   }
 ];
 ---
@@ -42,15 +42,60 @@ const testimonials = [
 <section id='kunden' class='bg-[#1C4003] text-[#BFAB99] py-[5vw] px-[4vw]'>
   <div class='max-w-6xl mx-auto'>
     <h2 class='font-heading text-3xl md:text-4xl text-[#BFAB99] mb-2 text-center'>Kundenmeinungen aus den letzten Jahren</h2>
-    <div class='w-[5%] h-[3px] bg-[#BFAB99] mx-auto mb-8'></div>
+    <div class='w-[60px] h-[3px] bg-[#BFAB99] mx-auto mb-8'></div>
 
-    <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
-      {testimonials.map((t) => (
-        <div class='bg-[#5C734C] p-6 rounded-sm'>
-          <p class='font-body text-sm md:text-base leading-relaxed text-[#F2EEEB] mb-4'>'{t.text}'</p>
-          <p class='font-heading text-sm text-[#BFAB99] text-right'>— {t.author}</p>
-        </div>
-      ))}
+    <div class='swiper testimonial-swiper pb-12'>
+      <div class='swiper-wrapper'>
+        {testimonials.map((t) => (
+          <div class='swiper-slide h-auto'>
+            <div class='bg-[#5C734C] p-6 h-full flex flex-col justify-between'>
+              <p class='font-body text-sm md:text-base leading-relaxed text-[#F2EEEB] mb-4' set:html={t.text}></p>
+              <h3 class='font-heading text-sm text-[#BFAB99] text-right'>— {t.author}</h3>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class='swiper-pagination'></div>
     </div>
   </div>
 </section>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('.testimonial-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        }
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+      },
+      loop: true,
+      speed: 500,
+    });
+  });
+</script>
+
+<style>
+  .testimonial-swiper .swiper-pagination-bullet {
+    background: #BFAB99;
+    opacity: 0.5;
+  }
+  .testimonial-swiper .swiper-pagination-bullet-active {
+    background: #BFAB99;
+    opacity: 1;
+  }
+  .testimonial-swiper .swiper-slide {
+    height: auto;
+  }
+</style>

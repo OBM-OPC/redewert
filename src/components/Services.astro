@@ -1,45 +1,89 @@
 ---
-const services = [
-  {
-    title: 'Persönliches Vorgespräch',
-    text: `Wir treffen uns zu einem ausführlichen Gespräch und reden gemeinsam über vergangene Zeiten und Erlebtes. Dabei findet man häufig in den Gedanken versteckte 'Schätze des Lebens' und entdeckt schöne Erinnerungen wieder. Denn ich möchte den Menschen in all seinen Facetten und Nuancen nachzeichnen und ihn noch einmal spürbar werden lassen.`
-  },
-  {
-    title: 'Individuelle Abschiedsrede',
-    text: `Das Herzstück der Zeremonie ist die persönliche Abschieds- bzw. Lebens-Rede. Diese gestalte ich für jeden Menschen neu, denn sie soll so einmalig sein, wie das Leben Ihrer/Ihres Verstorbenen es war. Die Trauerrede beinhaltet einen persönlichen Teil, welcher die wichtigsten Säulen des Lebens wiedergibt und das, was Ihren Angehörigen besonders auszeichnete. Dabei interessiert mich vor allem das Besondere, das Einzigartige, das Unverwechselbare!`
-  },
-  {
-    title: 'Musikalische Umrahmung',
-    text: `Musik ist ein wichtiges Element bei einer Abschiedsfeier und tut gut, tröstet und erhebt. Ich kann Ihnen nach eigenem musikalischen Gefühl einige Lieder vorschlagen, die passend für die Stimmung und das Wesen Ihres verstorbenen Angehörigen sein könnten. Wir werden dann gemeinsam entscheiden, welche Musik eingesetzt wird und auch von wem diese eingespielt wird.`
-  },
-  {
-    title: 'Freie Trauerfeier',
-    text: `Eine Trauerfeier ist keine Abwicklung, sondern ein Ritual der Freunde und Angehörigen, das den Verstorbenen ehrt und begleitet. Meine Aufgabe ist es, eine würdevolle, respektvolle, einfühlsame, authentische und liebevolle Veranstaltung zu gestalten. Hierbei bin ich ganz Ihre Diensterin, denn Sie wissen am besten, was Ihrem Angehörigen gefallen hätte und was nicht.`
-  },
-  {
-    title: 'Sprecher/in suchen',
-    text: `Sie haben Ihre Abschiedsrede bereits verfasst oder möchten dies selbst übernehmen? Gerne unterstütze ich Sie dabei, Ihre Rede zu strukturieren und auf den Punkt zu bringen. Gemeinsam schärfen wir Ihren Text und bereiten ihn auf den emotionalen Moment vor.`
-  },
-  {
-    title: 'Lebensgeschichte(n)',
-    text: `Ich halte es für sehr sinnvoll und wertvoll, über ein langes Leben und viele Lebensjahre Erinnerungen zu bewahren. Denn Menschen leben mit ihren Erinnerungen und diese sind ein wichtiger Teil unseres Daseins. Sollten Sie Interesse daran haben, kann ich gemeinsam mit Ihnen/Ihrem Angehörigen eine Biografie gestalten.`
-  }
-];
 ---
 
-<section id="leistungen" class="bg-[#F2EEEB] py-20 px-[4vw]">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="font-heading text-[clamp(2rem,4vw,3.5rem)] text-[#1C4003] text-center mb-16">
-      Meine Leistungen
-    </h2>
-    
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {services.map((service) => (
-        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <h3 class="font-heading text-xl text-[#1C4003] mb-4">{service.title}</h3>
-          <p class="font-body text-[#5C734C] text-sm leading-relaxed">{service.text}</p>
+<section id="angebot" class="bg-[#F2EEEB] py-[5vw] px-[4vw]">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="font-heading text-3xl md:text-4xl text-[#1C4003] mb-2 text-center">Mein Leistungs-Angebot</h2>
+    <div class="w-[60px] h-[3px] bg-[#BFAB99] mx-auto mb-6"></div>
+    <p class="font-body text-base md:text-lg leading-relaxed text-[#1C4003] mb-8 text-center">
+      Mit meiner Begleitung der Abschiedsfeier und der individuellen Rede möchte ich Ihnen die Möglichkeit geben, sich in Würde und Zugewandtheit an den/die Verstorbene zu erinnern. Gemeinsam können wir Ihrer/m Angehörigen einen sehr persönlichen Abschied gestalten. Dies ist der letzte Schritt, den Sie gehen können, um den gemeinsamen Weg zu beenden. Wenn wir uns gemeinsam auf den Weg machen und Erinnerungen lebendig werden lassen, kann aus einem schmerzhaften Abschied ein dankbares Lebewohl werden.
+    </p>
+
+    <div class="space-y-0">
+      <button class="service-accordion-btn bg-[#5C734C] text-[#F2EEEB] cursor-pointer px-4 py-3 w-full border-none text-left outline-none font-body text-[15px] transition-colors duration-400 flex items-center justify-between">
+        <strong>Persönliche Gestaltung</strong>
+      </button>
+      <div class="service-panel max-h-0 overflow-hidden transition-[max-height] duration-200 ease-out border-b border-[#F2EEEB]">
+        <div class="py-4 text-left">
+          <p class="font-body text-base leading-relaxed text-[#1C4003]">Ihnen liegt etwas auf dem Herzen? Gerne beziehe ich Ihre ganz persönlichen Gedanken und Vorstellungen mit in die Planung der Zeremonie ein. Vielleicht möchten Sie selbst oder Trauergäste die Abschiedsfeier aktiv mitgestalten, sich etwas vom Herzen reden. Oder mich bitten, in Ihrem Namen etwas vorzulesen. Gerne integriere ich Ihre Gedanken.</p>
         </div>
-      ))}
+      </div>
+
+      <button class="service-accordion-btn bg-[#5C734C] text-[#F2EEEB] cursor-pointer px-4 py-3 w-full border-none text-left outline-none font-body text-[15px] transition-colors duration-400 flex items-center justify-between">
+        <strong>Musik</strong>
+      </button>
+      <div class="service-panel max-h-0 overflow-hidden transition-[max-height] duration-200 ease-out border-b border-[#F2EEEB]">
+        <div class="py-4 text-left">
+          <p class="font-body text-base leading-relaxed text-[#1C4003]">Ein weiteres wichtiges Medium im Rahmen einer individuellen Abschiedszeremonie ist die ausgewählte Musik, welche während der Feier eine passende Begleitung sein kann. Diese ist frei wählbar und soll die Persönlichkeit Ihres/r Verstorbenen unterstreichen und Interessen aufgreifen. Es ist also egal, ob es die Lieblingsband ist oder Lieder aus vergangenen Zeiten. Bei der Gestaltung der musikalischen Begleitung kann ich Ihnen behilflich sein. Durch die modernen Medien ist fast alles möglich.</p>
+        </div>
+      </div>
+
+      <button class="service-accordion-btn bg-[#5C734C] text-[#F2EEEB] cursor-pointer px-4 py-3 w-full border-none text-left outline-none font-body text-[15px] transition-colors duration-400 flex items-center justify-between">
+        <strong>Begleitung von Kindern</strong>
+      </button>
+      <div class="service-panel max-h-0 overflow-hidden transition-[max-height] duration-200 ease-out border-b border-[#F2EEEB]">
+        <div class="py-4 text-left">
+          <p class="font-body text-base leading-relaxed text-[#1C4003]">Es gibt Kinder oder Enkel, die den Abschied miterleben? Ich nehme sie an die Hand und lasse sie nicht im Grau und Schwarz stehen. Wir malen mit Worten einen Regenbogen in den bunten Farben des Lebens, lassen bunte Luftballone steigen und senden gemeinsam Herzen in den Himmel.</p>
+        </div>
+      </div>
+
+      <button class="service-accordion-btn bg-[#5C734C] text-[#F2EEEB] cursor-pointer px-4 py-3 w-full border-none text-left outline-none font-body text-[15px] transition-colors duration-400 flex items-center justify-between">
+        <strong>Die Rede</strong>
+      </button>
+      <div class="service-panel max-h-0 overflow-hidden transition-[max-height] duration-200 ease-out border-b border-[#F2EEEB]">
+        <div class="py-4 text-left">
+          <p class="font-body text-base leading-relaxed text-[#1C4003]"><strong>„… denn jeder Mensch ist der Rede wert!"</strong><br><br>
+          <strong>Das Herzstück der Zeremonie ist die persönliche Abschieds- bzw. Lebens-Rede.</strong><br>
+          <strong>Diese gestalte ich für jeden Menschen neu</strong>, denn sie soll so einmalig sein, wie das Leben Ihrer/Ihres Verstorbenen es war. Die Trauerrede beinhaltet einen persönlichen Teil, welcher die wichtigsten Säulen des Lebens wiedergibt und das, was Ihren Angehörigen besonders auszeichnete. Dabei interessiert mich vor allem das Besondere, das Einzigartige, das Unverwechselbare!<br><br>
+          <strong>Um die Rede passend und authentisch schreiben zu können</strong>, treffen wir uns vorab zu einem ausführlichen Gespräch und reden gemeinsam über vergangene Zeiten und Erlebtes. Dabei findet man häufig in den Gedanken versteckte „Schätze des Lebens" und entdeckt schöne Erinnerungen wieder. Denn ich möchte den Menschen in all seinen Facetten und Nuancen nachzeichnen und ihn noch einmal spürbar werden lassen.<br><br>
+          <strong>Begleitung der Beisetzung am Grab</strong><br>
+          Gerne begleite ich Sie und die Teilnehmer der Abschiedsfeier beim letzten Gang zur Begräbnisstätte und richte auch am Grab noch eine Ansprache an die Anwesenden und einen letzten Gruß an den Verstorbenen. Dabei übernehme ich es, wenn gewünscht, ein gemeinsam gesprochenes Gebet anzustimmen, ein letztes Musikstück abzuspielen und Ihre Vorgaben, was den Ablauf angeht, zu kommunizieren.<br><br>
+          <strong>So einmalig wie das Leben, so soll auch der Abschied sein…</strong><br>
+          All Ihre Vorstellungen sollen einen Platz finden. Sprechen Sie mit mir, erzählen Sie mir offen Ihre Gedanken und Wünsche. Es gibt für mich kein festgelegtes Vorgehen. „… denn jeder Mensch ist der Rede wert!"</p>
+        </div>
+      </div>
     </div>
   </div>
+
+  <div class="mt-12 flex justify-center">
+    <img src="/images/klaus_reinke-743x1024.webp" alt="Klaus Reinke" class="w-full max-w-sm h-auto object-contain" />
+  </div>
 </section>
+
+<script>
+  document.querySelectorAll('.service-accordion-btn').forEach(acc => {
+    acc.addEventListener('click', function() {
+      this.classList.toggle('active');
+      const panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+<style>
+  .service-accordion-btn:hover {
+    background-color: #1C4003;
+  }
+  .service-accordion-btn::after {
+    content: url("/images/pfeil_rechts.png");
+    display: inline-block;
+    transition: transform 0.2s;
+  }
+  .service-accordion-btn.active::after {
+    transform: rotate(90deg);
+  }
+</style>

@@ -14,24 +14,34 @@ const navLinks = [
 ];
 ---
 
+<!-- Side Navigation -->
 <div id='mySidenav2' class='sidenav fixed top-0 left-0 h-screen w-0 bg-[#F4D3B5] z-[9999] pt-[60px] overflow-x-hidden transition-[width] duration-500'>
-  <a class='closebtn absolute top-0 right-[25px] text-[36px] ml-[50px] cursor-pointer text-[#1C4003] hover:text-[#5C734C]' onclick='closeNav2()' rel='nofollow'>&times;</a>
+  <a class='closebtn absolute top-0 right-[25px] text-[36px] ml-[50px] cursor-pointer text-[#1C4003] hover:text-[#5C734C] transition-colors duration-300' onclick='closeNav2()' rel='nofollow'>&times;</a>
   {navLinks.map((link, i) => (
     <>
       {i === 6 && (
-        <a id='redenwir' class='block px-8 py-2 text-[25px] text-[#1C4003] no-underline transition-colors duration-300 hover:text-[#5C734C] whitespace-nowrap overflow-hidden text-ellipsis'>
-          <b>Reden wir?</b>
-        </a>
+        <>
+          <a class='block px-8 py-2'></a>
+          <a id='redenwir' class='block px-8 py-2 text-[25px] text-[#1C4003] no-underline transition-colors duration-300 hover:text-[#5C734C] whitespace-nowrap overflow-hidden text-ellipsis'>
+            <b>Reden wir?</b>
+          </a>
+        </>
       )}
       {link.onclick ? (
         <a href={link.href} onclick={link.onclick} class='block px-8 py-2 text-[25px] text-[#1C4003] no-underline transition-colors duration-300 hover:text-[#5C734C] whitespace-nowrap overflow-hidden text-ellipsis'>{link.label}</a>
       ) : (
         <a href={link.href} onclick='closeNav2()' class='block px-8 py-2 text-[25px] text-[#1C4003] no-underline transition-colors duration-300 hover:text-[#5C734C] whitespace-nowrap overflow-hidden text-ellipsis'>{link.label}</a>
       )}
+      {i === 6 && (
+        <>
+          <br/><br/><br/>
+        </>
+      )}
     </>
   ))}
 </div>
 
+<!-- Burger Menu -->
 <div id='menuopener' class='fixed top-[3vw] left-[3vw] z-50 cursor-pointer'>
   <svg id='burgermenusvg' onclick='openNav2()' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
     viewBox='0 0 512 383.4' style='enable-background:new 0 0 512 383.4;' xml:space='preserve' class='w-[10vw] md:w-[4vw] lg:w-[2vw] h-auto'>
@@ -47,6 +57,13 @@ const navLinks = [
         C512,335.2,498,321.2,480.9,321.2z'/>
     </g>
   </svg>
+</div>
+
+<!-- Logo top-right -->
+<div class='fixed top-[3vw] right-[3vw] z-40'>
+  <a href='/'>
+    <img src='https://klausreinke.de/wp-content/uploads/2024/01/redewert_logotype_gruen-beige-1024x393.png' alt='Redewert Klaus Reinke' class='w-[30vw] md:w-[15vw] lg:w-[10vw] h-auto' loading='lazy' />
+  </a>
 </div>
 
 <script is:inline>

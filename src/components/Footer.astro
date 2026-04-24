@@ -2,16 +2,38 @@
 ---
 
 <footer class='bg-[#1C4003] text-[#BFAB99] py-12 px-[4vw]'>
-  <div class='max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6'>
-    <div class='flex flex-wrap justify-center gap-4 text-sm'>
-      <a href='/impressum' class='hover:text-[#F2EEEB] transition-colors'>Impressum</a>
-      <span>·</span>
-      <a href='/datenschutz' class='hover:text-[#F2EEEB] transition-colors'>Datenschutz</a>
-      <span>·</span>
-      <a href='/cookie-richtlinie' class='hover:text-[#F2EEEB] transition-colors'>Cookie-Richtlinie</a>
-      <span>·</span>
-      <a href='/agb' class='hover:text-[#F2EEEB] transition-colors'>AGB</a>
+  <div class='max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8'>
+    <!-- Column 1: Reden wir? -->
+    <div class='flex-1'>
+      <h2 class='font-heading text-2xl md:text-3xl text-[#F2EEEB] mb-2'>Reden wir?</h2>
+      <div class='w-[60px] h-[3px] bg-[#BFAB99]'></div>
     </div>
-    <p class='text-xs text-[#BFAB99]/70'>&copy; {new Date().getFullYear()} Klaus Reinke – Redewert</p>
+
+    <!-- Column 2: Address -->
+    <div class='flex-1'>
+      <p class='font-body text-base leading-relaxed'>
+        <span class='text-[#C6B09A]'>redewert</span> klaus reinke<br>
+        hölderlinstraße 12<br>
+        69502 hemsbach<br>
+        <a href='mailto:redewert@klausreinke.de' class='text-[#BFAB99] hover:text-[#F2EEEB] transition-colors'>redewert@klausreinke.de</a>
+      </p>
+    </div>
+
+    <!-- Column 3: Phone -->
+    <div class='flex-1'>
+      <h3 class='font-heading text-xl'>
+        <a href='tel:+491709100541' class='text-[#F2EEEB] hover:text-[#BFAB99] transition-colors'>+49 170 9100541</a>
+      </h3>
+    </div>
+
+    <!-- Column 4: Links -->
+    <div class='flex-1'>
+      <p class='font-body text-base leading-relaxed'>
+        <a href='/impressum' class='text-[#F2EEEB] hover:text-[#BFAB99] transition-colors block'>impressum</a>
+        <a href='/datenschutz' class='text-[#F2EEEB] hover:text-[#BFAB99] transition-colors block'>datenschutz</a>
+        <a href='/agb' class='text-[#F2EEEB] hover:text-[#BFAB99] transition-colors block'>agb</a>
+        <a href='/cookie-richtlinie' class='text-[#F2EEE9] hover:text-[#BFAB99] transition-colors block'>cookies</a>
+      </p>
+    </div>
   </div>
 </footer>
